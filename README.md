@@ -5,7 +5,6 @@ workshop repo to teach you all about Modern JavaScript!
 
 [![Build Status][build-badge]][build]
 [![AppVeyor Build Status][win-build-badge]][win-build]
-[![Code Coverage][coverage-badge]][coverage]
 [![GPL 3.0 License][license-badge]][license]
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 [![PRs Welcome][prs-badge]][prs] [![Code of Conduct][coc-badge]][coc]
@@ -220,7 +219,4 @@ at kent@doddsfamily.us
 [win-build-badge]:
   https://img.shields.io/appveyor/ci/kentcdodds/modern-javascript.svg?style=flat-square&logo=appveyor
 [win-build]: https://ci.appveyor.com/project/kentcdodds/modern-javascript
-[coverage-badge]:
-  https://img.shields.io/codecov/c/github/kentcdodds/modern-javascript.svg?style=flat-square
-[coverage]: https://codecov.io/github/kentcdodds/modern-javascript
 [watchman]: https://facebook.github.io/watchman/docs/install.html
