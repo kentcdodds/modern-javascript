@@ -12,5 +12,3 @@ branches:
     - master
 script:
   - npm run setup
-after_success:
-  - npx codecov
