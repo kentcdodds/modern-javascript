@@ -3,16 +3,15 @@
 // so it's best practice to put them at the top of the file.
 
 test('can import math', () => {
-  // There's a module at `./exercise-helpers/math`
+  // 🐨 There's a module at `./exercise-helpers/math`
   // import all of that module's exports in an object called `math`
-  // this one's already done! You're welcome :)
   expect(math.sqrt).toBeDefined()
   expect(math.square).toBeDefined()
   expect(math.diag).toBeDefined()
 })
 
 test('can specify what to import, to only retain pieces of the import', () => {
-  // 🐨 Import `exercise-helpers/math` again, but
+  // 🐨 Import `./exercise-helpers/math` again, but
   // pull out only the `sqrt` as mySqrt, and `square` as mySquare
   expect(mySqrt).toBe(math.sqrt)
   expect(mySquare).toBe(math.square)
@@ -53,4 +52,6 @@ test.skip('I submitted my elaboration and feedback', () => {
 /*
 eslint
   no-undef: 0,
+  no-duplicate-imports: 0,
+  import/no-duplicates: 0,
 */
