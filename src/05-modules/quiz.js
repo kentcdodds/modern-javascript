@@ -1,4 +1,4 @@
-// we'll be importing stuff from './helpers/module-a'
+// we'll be importing stuff from './quiz-helpers/module-a'
 
 // 1. how could we import a module without doing
 // anything with what we get back?
@@ -6,7 +6,7 @@
 // 2. how could we import the default export?
 
 // 3. how could we import `theAnswer` and
-// `theQuestion` from './helpers/module-a'?
+// `theQuestion` from './quiz-helpers/module-a'?
 
 // 4. how could we import `theAnswer` and rename it
 // to `fortyTwo`?
@@ -56,22 +56,22 @@ SOLUTIONS ARE BELOW
 // But they're commented out because JavaScript
 
 // 1.
-// import './helpers/module-a'
+// import './quiz-helpers/module-a'
 
 // 2.
-// import add from './helpers/module-a'
+// import add from './quiz-helpers/module-a'
 
 // 3.
-// import {theAnswer} from './helpers/module-a'
+// import {theAnswer} from './quiz-helpers/module-a'
 
 // 4.
-// import {theAnswer as fourtyTwo} from './helpers/module-a'
+// import {theAnswer as fourtyTwo} from './quiz-helpers/module-a'
 
 // 5.
-// import {default as add, theQuestion} from './helpers/module-a'
+// import {default as add, theQuestion} from './quiz-helpers/module-a'
 
 // 6.
-// import add, {theQuestion} from './helpers/module-a'
+// import add, {theQuestion} from './quiz-helpers/module-a'
 
 // 7.
-// import * as allTheThings from './helpers/module-a'
+// import * as allTheThings from './quiz-helpers/module-a'

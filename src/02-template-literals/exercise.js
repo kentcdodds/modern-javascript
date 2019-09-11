@@ -57,7 +57,7 @@ describe.skip('💯 extra credit', () => {
 // 3. Change submitted from `false` to `true`
 // 4. And you're all done!
 /*
-http://ws.kcd.im/?ws=Modern%20JavaScript&e=Template+Literals&em=
+http://ws.kcd.im/?ws=Modern%20JavaScript&e=Template%20Literals&em=
 */
 test.skip('I submitted my elaboration and feedback', () => {
   const submitted = false // change this when you've submitted!
