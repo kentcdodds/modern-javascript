@@ -77,4 +77,5 @@ eslint
   no-const-assign: 0,
   no-unused-vars: 0,
   no-shadow: 0,
+  jest/no-if: 0,
 */

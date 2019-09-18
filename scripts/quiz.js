@@ -1,4 +1,4 @@
-/* eslint no-case-declarations:0 */
+const {formatStackTrace} = require('jest-message-util')
 const path = require('path')
 const chokidar = require('chokidar')
 const chalk = require('chalk')
@@ -7,11 +7,15 @@ const {sync: globSync} = require('glob')
 let lastFileRun = null
 
 const cwd = path.join(__dirname, '../src')
+const [_process, _script, arg] = process.argv
 const watcher = watchFiles()
 clearConsole()
 sayWatching()
 sayCommands()
 listenForInput()
+if (arg) {
+  runMatchingQuiz(arg)
+}
 
 function watchFiles() {
   return chokidar
@@ -50,13 +54,16 @@ function listenForInput() {
         }
         break
       default:
-        const [relativePathOfFirstMatchingFile] = globSync(
-          `*${input}*/quiz.js`,
-          {cwd},
-        )
-        rerunFile(relativePathOfFirstMatchingFile)
+        runMatchingQuiz(input)
     }
   })
+}
+
+function runMatchingQuiz(input) {
+  const [relativePathOfFirstMatchingFile] = globSync(`*${input}*/quiz.js`, {
+    cwd,
+  })
+  rerunFile(relativePathOfFirstMatchingFile)
 }
 
 function rerunFile(relativePath) {
@@ -69,7 +76,16 @@ function rerunFile(relativePath) {
     delete require.cache[fullPath]
     require(fullPath) // eslint-disable-line global-require
   } catch (e) {
-    console.log(getRelevantStackTrace(e))
+    console.log(
+      getRelevantStackTrace(
+        formatStackTrace(
+          e.stack,
+          {rootDir: cwd},
+          {noStackTrace: false},
+          fullPath,
+        ),
+      ),
+    )
   }
 }
 
@@ -91,19 +107,20 @@ function sayCommands() {
   )
 }
 
-function getRelevantStackTrace({stack}) {
+function getRelevantStackTrace(stack) {
   const splitStack = stack.split('\n')
-  const newStack = [splitStack[0]] // skip the first line which is the error message
+  const newStack = [splitStack[0]] // start with the first line which is the error message
   for (let i = 1; i < splitStack.length; i++) {
     const line = splitStack[i]
     const isCodeFrame = line.includes('|')
     // if it starts with a number then it's part of a code frame and we want that.
-    if (line.includes(cwd) || isCodeFrame) {
+    if (!line.includes('node_modules') || isCodeFrame) {
       newStack.push(isCodeFrame ? line : chalk.red(line))
     } else {
-      newStack.push('    etc...')
       break
     }
   }
   return newStack.join('\n')
 }
+
+/* eslint no-case-declarations:0, import/no-extraneous-dependencies:0 */

@@ -51,7 +51,6 @@ test.skip('I submitted my elaboration and feedback', () => {
 
 /*
 eslint
-  no-undef: 0,
   no-duplicate-imports: 0,
   import/no-duplicates: 0,
 */

@@ -1,7 +1,7 @@
 test('can be used in place of `var`', () => {
   // 🐨 Declare bandName using 'let'
   // 🐨 Declare isBestBand using 'let'
-  expect(bandName).toBe('Queen')
+  expect(bandName).toBe('Journey')
   expect(isBestBand).toBe(true)
 })
 
@@ -89,8 +89,8 @@ eslint
   no-var: 0,
   vars-on-top: 0,
   block-scoped-var: 0,
-  no-undef: 0,
   no-lone-blocks: 0,
   no-const-assign: 0,
   no-shadow: 0,
+  jest/no-if: 0,
 */

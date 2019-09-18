@@ -16,6 +16,7 @@ module.exports = {
       files: ['**/exercise.js'],
       rules: {
         'no-unused-vars': 'off',
+        'no-undef': 'off',
       },
     },
     {

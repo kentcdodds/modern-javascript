@@ -42,7 +42,7 @@
 - 🏋 Modules
 - 🏋 Object Literals
 - 😴 10 Minutes
-- 🏋 Object/Array rest
+- 🏋 Object/Array rest/spread
 - 🏋 Function spread, argument defaults and rest
 - 😴 10 Minutes
 - 🏋 Arrow functions

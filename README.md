@@ -40,7 +40,7 @@ Here are the topics we'll be covering:
 - Destructuring
 - Modules
 - Object Literals
-- Object/Array rest
+- Object/Array rest/spread
 - Function spread, argument defaults and rest
 - Arrow functions
 - Sets, Maps, and WeakSets/WeakMaps

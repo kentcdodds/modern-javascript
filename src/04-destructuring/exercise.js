@@ -102,5 +102,4 @@ test.skip('I submitted my elaboration and feedback', () => {
 /*
 eslint
   no-sparse-arrays: 0,
-  no-undef: 0,
 */

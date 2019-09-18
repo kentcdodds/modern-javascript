@@ -106,6 +106,7 @@ function defaultValues() {
   return legCount
 
   function getDefaultLegCount() {
+    // NOTE: the default value does not have to be a function call!
     return 4
   }
 }

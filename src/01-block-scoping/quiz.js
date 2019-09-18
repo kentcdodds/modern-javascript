@@ -140,7 +140,6 @@ function semiPracticalSOLUTION() {
 /*
 eslint
   prefer-const: 0,
-  no-undef: 0,
   no-shadow: 0,
   no-lone-blocks: 0,
   object-shorthand: 0,
@@ -149,6 +148,7 @@ eslint
   no-loop-func: 0,
   no-const-assign: 0,
   no-use-before-define: 0,
-  no-unused-vars: 0
-  no-constant-condition: 0
+  no-unused-vars: 0,
+  no-undef: 0,
+  no-constant-condition: 0,
 */
