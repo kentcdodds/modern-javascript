@@ -17,6 +17,8 @@ module.exports = {
       rules: {
         'no-unused-vars': 'off',
         'no-undef': 'off',
+        'func-names': 'off',
+        'babel/no-invalid-this': 'off',
       },
     },
     {

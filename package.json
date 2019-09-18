@@ -63,7 +63,8 @@
             "node": "current"
           }
         }
-      ]
+      ],
+      "@babel/preset-react"
     ]
   }
 }
