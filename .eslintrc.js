@@ -1,5 +1,10 @@
 module.exports = {
-  extends: ['kentcdodds', 'kentcdodds/import', 'kentcdodds/jest'],
+  extends: [
+    'kentcdodds',
+    'kentcdodds/import',
+    'kentcdodds/jest',
+    'kentcdodds/react',
+  ],
   rules: {
     'no-console': 'off',
     'jest/no-disabled-tests': 'off',

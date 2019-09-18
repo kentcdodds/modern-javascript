@@ -46,7 +46,7 @@
 - 🏋 Function spread, argument defaults and rest
 - 😴 10 Minutes
 - 🏋 Arrow functions
-- 🏋 Sets, Maps, and WeakSets/WeakMaps
+- 🏋 Classes
 - ❓ Q&A
 
 ## Scripts

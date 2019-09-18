@@ -43,7 +43,7 @@ Here are the topics we'll be covering:
 - Object/Array rest/spread
 - Function spread, argument defaults and rest
 - Arrow functions
-- Sets, Maps, and WeakSets/WeakMaps
+- Classes
 
 ## System Requirements
 
@@ -174,6 +174,15 @@ Thanks goes to these wonderful people
 This project follows the
 [all-contributors](https://github.com/all-contributors/all-contributors)
 specification. Contributions of any kind welcome!
+
+## Thanks
+
+Special thanks to [Aaron Frost](https://twitter.com/js_dev) and
+[Axel Rauschmayer](https://twitter.com/rauschma) for creating the
+[original repo](https://github.com/aaronfrost/es6-workshop) which was forked to
+my original [es6-workshop](https://github.com/kentcdodds/es6-workshop) and then
+I moved some of that content here. The project has undergone a LOT of changes,
+but much of the same ideas were developed by Axel and Aaron. Thanks!
 
 ## License
 

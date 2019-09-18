@@ -1,12 +1,5 @@
+import React from 'react'
 import log from '../pretty-log'
-
-// this is a pretend React just so the JSX example below works...
-const React = {
-  createElement: (type, props, ...children) => ({
-    type,
-    props: {...props, children: children.length ? children : props.children},
-  }),
-}
 
 function multiArgument() {
   // refactor to an arrow function
