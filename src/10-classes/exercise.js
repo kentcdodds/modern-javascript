@@ -76,7 +76,7 @@ describe.skip('💯 extra credit', () => {
     // 🐨 refactor this to a class.
     function Counter(...args) {
       // 💰 basically calling super(...args)
-      React.Component.call(this, ...args)
+      Reflect.construct(React.Component, args)
 
       // 💰 looks like two class properties to me...
       this.state = {count: 0}
