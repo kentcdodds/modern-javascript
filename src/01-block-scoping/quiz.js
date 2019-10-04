@@ -22,7 +22,7 @@ function immutable() {
 function immutableReference() {
   // what is returned?
   const object = {a: 'b'}
-  // object = {a: 'q'}
+  object = {a: 'q'}
   return object
 }
 // log(immutableReference())
