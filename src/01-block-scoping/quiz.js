@@ -73,6 +73,7 @@ function veryScoped() {
 // log(veryScoped())
 
 function temporalDeadZone() {
+  // what's logged?
   console.log(myVar)
   console.log(myLet)
   console.log(myConst)
@@ -80,6 +81,7 @@ function temporalDeadZone() {
   var myVar = 'var'
   let myLet = 'let'
   const myConst = 'const'
+  // what's returned?
   return {myVar: myVar, myLet: myLet, myConst: myConst}
 }
 // log(temporalDeadZone())
