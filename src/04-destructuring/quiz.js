@@ -15,6 +15,9 @@ function getAvgTemp() {
     today: {max: 2.6, min: -6.3},
     tomorrow: {max: 3.2, min: -5.8},
   }
+
+  const unit = weather.unit
+
   const maxToday = weather.today.max
   const minToday = weather.today.min
 
@@ -24,7 +27,7 @@ function getAvgTemp() {
   return {
     max: (maxToday + maxTomorrow) / 2.0,
     min: (minToday + minTomorrow) / 2.0,
-    unit: weather.unit,
+    unit: unit,
   }
 }
 // log(getAvgTemp())
