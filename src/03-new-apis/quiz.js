@@ -21,8 +21,8 @@ function stringRepeat() {
 function padString() {
   const string = 'hello'
   // make string have padding on either side
-  const startPadded = string.watBeginning(2) // maybe?
-  const endPadded = startPadded.watEnding(2) // perhaps?
+  const startPadded = string.watBeginning(7) // maybe?
+  const endPadded = startPadded.watEnding(9) // perhaps?
   return endPadded === '  hello  '
 }
 // log(padString())
