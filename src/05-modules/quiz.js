@@ -21,6 +21,16 @@
 // object called `allTheThings`
 
 /*
+Here are how you export things:
+
+export default EXPRESSION
+export EXPRESSION
+export {IDENTIFIER, IDENTIFIER as IDENTIFIER}
+export default from './some-other-module'
+export * from './some-other-module'
+*/
+
+/*
 
 
 
