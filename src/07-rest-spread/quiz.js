@@ -18,11 +18,11 @@ function concatArraysComplex() {
   return flatter(arr)
 
   function flatter(arg) {
-    return arg.reduce((acc, item) => {
-      if (Array.isArray(item)) {
-        return acc.concat(flatter(item))
-      }
-      return acc.concat([item])
+    if (!Array.isArray(arg)) {
+      return [arg]
+    }
+    return arg.reduce(function flatterReducer(acc, item) {
+      return acc.concat(flatter(item))
     }, [])
   }
 }
@@ -140,12 +140,19 @@ function concatArraysSOLUTION() {
 // log(concatArraysSOLUTION())
 
 function concatArraysComplexSOLUTION() {
+  // flatten nested arrays of arbitrary levels of nesting
+  // arr can be typically like this: [8, 9, [6, [5, [7], [45, 34, [2]]]]]
+  // output shold be [8, 9, 6, 5, 7, 45, 34, 2]
+  // use spread operator in place of Array.prototype.concat()
   const arr = [8, 9, [6, [5, [7], [45, 34, [[[2]]], [[[[[[[[7]]]]], 90]]]]]]]
   return flatter(arr)
 
   function flatter(arg) {
-    return arg.reduce((acc, item) => {
-      return Array.isArray(item) ? [...acc, ...flatter(item)] : [...acc, item]
+    if (!Array.isArray(arg)) {
+      return [arg]
+    }
+    return arg.reduce(function flatterReducer(acc, item) {
+      return [...acc, ...flatter(item)]
     }, [])
   }
 }
