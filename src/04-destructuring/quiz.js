@@ -124,6 +124,7 @@ function ontoAnObject() {
   object.one = array[0]
   object.two = array[1]
   object.three = array[2]
+  // bonus/spoiler...
   object.rest = array.slice(3)
   return object
 }
