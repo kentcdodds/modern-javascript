@@ -105,7 +105,9 @@ function nestedArrayAndObject() {
 
 function defaultValues() {
   const bench = {type: 'Piano', adjustable: false}
-  const legCount = bench.legs === undefined ? getDefaultLegCount() : bench.legs
+
+  const legs = bench.legs
+  const legCount = legs === undefined ? getDefaultLegCount() : legs
   return legCount
 
   function getDefaultLegCount() {
