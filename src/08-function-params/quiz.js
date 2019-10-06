@@ -95,8 +95,7 @@ function destructureWithDefaultParams() {
     computeCircleArea({r: 3, x: 8, y: 6}),
   ]
 }
-
-log(destructureWithDefaultParams())
+// log(destructureWithDefaultParams())
 
 /*
 
