@@ -84,9 +84,9 @@ function destructureWithDefaultParams() {
 
     const area = Math.PI * radius * radius
 
-    return `Circle at (${xCoordinate}, ${yCoordinate}), with radius ${radius}, has area = ${area.toFixed(
-      2,
-    )}`
+    const fixedArea = area.toFixed(2)
+
+    return `Circle at (${xCoordinate}, ${yCoordinate}), with radius ${radius}, has area = ${fixedArea}`
   }
 
   return [
@@ -185,9 +185,8 @@ function restParamsSOLUTION() {
 function destructureWithDefaultParamsSOLUTION() {
   function computeCircleArea({r = 1.0, x = 0.0, y = 0.0} = {}) {
     const area = Math.PI * r * r
-    return `Circle at (${x}, ${y}), with radius ${r}, has area = ${area.toFixed(
-      2,
-    )}`
+    const fixedArea = area.toFixed(2)
+    return `Circle at (${x}, ${y}), with radius ${r}, has area = ${fixedArea}`
   }
 
   return [
