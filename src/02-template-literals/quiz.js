@@ -35,6 +35,9 @@ function tagging() {
 }
 // log(tagging())
 
+// For more about what you can do with tagged template literals
+// checkout: https://github.com/declandewet/common-tags
+
 /*
 
 

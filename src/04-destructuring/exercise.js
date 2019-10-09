@@ -1,44 +1,37 @@
-function getAddress() {
-  return {
-    city: 'Salt Lake City',
-    state: 'UT',
-    zip: 84115,
-    coords: {
-      lat: 40.776608,
-      long: -111.920485,
-    },
-  }
-}
-
-function getNumbers() {
-  return [1, 2, 3, 4, 5, 6]
-}
-
-function getNestedNumbers() {
-  return [1, 2, [3, 4, [5, 6]]]
+const address = {
+  city: 'Salt Lake City',
+  state: 'UT',
+  zip: 84115,
+  coords: {
+    lat: 40.776608,
+    long: -111.920485,
+  },
 }
 
 test('can be used to create variables from object properties', () => {
-  // 🐨 Using destructuring, call `getAddress()` and create a 'city', 'state' and 'zip' variable.
+  // 🐨 destructure `address` and create a 'city', 'state' and 'zip' variable.
   // 💰 what you write will be the functional equivalent to this:
-  // const address = getAddress()
   // const city = address.city
   // const state = address.state
   // const zip = address.zip
   expect(city).toBe('Salt Lake City')
   expect(state).toBe('UT')
   expect(zip).toBe(84115)
-  expect(typeof address).toBe('undefined')
 })
 
 test('sets missing values to undefined', () => {
-  // 🐨 Using destructuring, call `getAddress()` and
-  // attempt to destructure a property called `street`
+  // 🐨 attempt to destructure a property off `address` called `street`
   expect(street).toBeUndefined()
 })
 
+test('can provide a default value', () => {
+  // 🐨 attempt to destructure a property off `address` called `street` and give
+  // it a default value of 'unknown'
+  expect(street).toBe('unknown')
+})
+
 test('can alias destructured variables', () => {
-  // 🐨 Using destructuring, call `getAddress()` and pull out the
+  // 🐨 destructure `address` and pull out the
   // city, state and zip properties and alias them to c, s, z, respectively
   expect(c).toBe('Salt Lake City')
   expect(s).toBe('UT')
@@ -48,14 +41,23 @@ test('can alias destructured variables', () => {
   expect(typeof zip).toBe('undefined')
 })
 
+test('can alias and default destructured variables', () => {
+  // 🐨 attempt to destructure a property off `address` called `street` and give
+  // it a default value of 'unknown' and alias the variable that's created to `s`
+  expect(s).toBe('unknown')
+  expect(typeof street).toBe('undefined')
+})
+
 test('can be used to create variables from array values', () => {
-  // 🐨 Call getNumbers and destructure the first value as `one` and the second as `two`
+  const numbers = [1, 2, 3, 4, 5, 6]
+  // 🐨 destructure `numbers` and destructure the first value as `one` and the second as `two`
   expect(one).toBe(1)
   expect(two).toBe(2)
 })
 
 test('can skip indexes in arrays', () => {
-  // 🐨 Call getNumbers and destructure the first value out as `one` and the third as `three`
+  const numbers = [1, 2, 3, 4, 5, 6]
+  // 🐨 destructure `numbers` and destructure the first value out as `one` and the third as `three`
   expect(one).toBe(1)
   expect(three).toBe(3)
   expect(typeof two).toBe('undefined')
@@ -64,16 +66,18 @@ test('can skip indexes in arrays', () => {
 //////// 💯 EXTRA CREDIT ////////
 describe.skip('💯 extra credit', () => {
   test('can destructure nested variables', () => {
-    // 🐨 Call `getAddress()` and destructure the `lat` and `long`
-    // from coords using nested destructuring (without making a coords variable).
+    // 🐨 `address` and destructure the `lat` and `long` from coords using
+    // nested destructuring, in the same statement, get the coords object as
+    // well
     expect(lat).toBe(40.776608)
     expect(long).toBe(-111.920485)
-    expect(typeof coords).toBe('undefined')
+    expect(coords).toEqual({lat, long})
   })
 
   test('can do nested destructuring with arrays', () => {
-    // 🐨 Call getNestedNumbers and destructure the first value out as `one`, the 3 as `three` and 6 as `sixth`.
-    // 💰 NOTE: this is getNestedNumbers, not getNumbers like the last test!
+    const nestedNumbers = [1, 2, [3, 4, [5, 6]]]
+    // 🐨 destructure nestedNumbers to get the first value out as `one`,
+    // the 3 as `three` and 6 as `six`.
     expect(one).toBe(1)
     expect(three).toBe(3)
     expect(six).toBe(6)
