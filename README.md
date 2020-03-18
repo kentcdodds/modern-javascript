@@ -1,9 +1,3 @@
-<p align="center">
-<a href="https://codefund.io/properties/514/visit-sponsor">
-<img src="https://codefund.io/properties/514/sponsor" />
-</a>
-</p>
-
 # Modern JavaScript
 
 👋 hi there! My name is [Kent C. Dodds](https://kentcdodds.com)! This is a
